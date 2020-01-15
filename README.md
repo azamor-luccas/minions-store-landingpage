@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Landing Page criada para o case dev da StartecJobs
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby version: 2.6.3
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deploy no Heroku: https://sleepy-castle-69720.herokuapp.com/
