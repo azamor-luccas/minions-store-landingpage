@@ -102,10 +102,9 @@ html lang="en"
             = label_tag(:phil, "Phil:")
             div.col-sm10
               = number_field(:phil, :price, in: 0.0..10.0, step: 1.0)
-          div.form-group-row
-            div.col-sm10
-            div.col-sm10
-              = submit_tag("Reserve")
+          div.form-group-row 
+              div style="display: relative; margin-left: 40%;"
+                = submit_tag("Reserve") 
 
 
 
