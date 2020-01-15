@@ -66,6 +66,22 @@ Rails.application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+
+
+  config.action_mailer.default_url_options = { :host => 'sleepy-castle-69720.herokuapp.com/' }
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :enable_starttls_auto => true,
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => "gmail.com",
+      :authentication => :login,
+      :user_name => "luccasaugusto918@gmail.com",
+      :password => "E9wyH5Rsm7LSFBS"
+  }
+
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
   config.i18n.fallbacks = true
