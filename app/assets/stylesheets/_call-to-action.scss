@@ -1,0 +1,33 @@
+.call-to-action {
+  background-color: #7d93ad;
+  min-height: 30rem;
+  background-size: cover;
+  
+  @media (min-width: 768px) {
+    .call-to-action-text {
+      padding: 7rem;
+    }
+  }
+
+  .text-container{
+  display: flex;
+  margin-left: 50%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  }
+
+  .form-reservas{
+  display: flex;
+  justify-content: center;
+  margin-right: 50%;
+  align-items: center;
+  height: 100%;  
+  }
+
+  .begging-img{
+  float: left;
+  width: 50%
+  }
+
+}

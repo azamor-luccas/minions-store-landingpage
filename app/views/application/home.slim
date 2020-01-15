@@ -1,0 +1,121 @@
+doctype html
+html lang="en" 
+  head
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" /
+    meta content="" name="description" /
+    meta content="" name="author" /
+    title Minions Store
+  body
+
+    /! Navigation
+    nav.navbar.text-white.static-top
+      .container
+        a href="/"
+          = image_tag('minions-store-logo-2-small.png', alt:"logo")
+        a.btn.btn-primary href="#reservas"  Reserve
+
+
+
+    /! Masthead
+    header.masthead.text-white.text-center
+      .background-img-div
+      .overlay
+      .container
+        .row
+          .col-xl-9.mx-auto
+            h1.mb-5 Conheça a nova linha de bonecos minions da Minions Store! 
+
+
+
+    /! Image Showcases
+    section.showcase
+      .container-fluid.p-0
+
+        .row.no-gutters
+          .col-lg-6.order-lg-2.text-white.showcase-img
+            = image_tag("jerry.png", alt:"jerry")
+          .col-lg-6.order-lg-1.my-auto.showcase-text
+            h2 Jerry
+            p.lead.mb-0 O preferido de muitos, Jerry é um brincalhão e melhor amigo de Stuart.
+
+        .row.no-gutters
+          .col-lg-6.text-white.showcase-img style=("text-align: right") 
+            = image_tag("dave.png", alt:"dave")
+          .col-lg-6.my-auto.showcase-text
+            h2 Dave
+            p.lead.mb-0 Dave é inteligente, gentil, atencioso e engraçado, mas às vezes propenso a acidentes.
+
+        .row.no-gutters
+          .col-lg-6.order-lg-2.text-white.showcase-img
+            = image_tag("bob.png", alt:"bob")
+          .col-lg-6.order-lg-1.my-auto.showcase-text
+            h2 Bob!
+            p.lead.mb-0 Ele gosta de histórias para dormir e brincar com seu ursinho de pelúcia favorito, Tim.
+
+        .row.no-gutters
+          .col-lg-6.showcase-img style=("overflow: hidden;") 
+            = image_tag("kevin.png", alt:"kevin", style:"float: left; width: 50%")
+            .kevin
+              p.lead.mb-0 Kevin adora provocar pessoas ou Minions. Mas isso não o impede de realmente se preocupar com o bem-estar da tribo Minion
+          .col-lg-6.showcase-img style=("overflow: hidden;") 
+            = image_tag("phil.png", alt:"phil", style:"float: right; width: 50%")
+            .phil
+              p.lead.mb-0 Phil é o Minion mais responsável de todos, ele vai liderar a busca por um vilão
+
+
+
+    /! Call to Action
+    section.call-to-action
+      .row.no-gutters
+        .col-lg-6.call-to-action
+          = image_tag("begging.png", alt:"minion-begging", class:"begging-img")
+          .text-container
+            div
+              h2 Não perca!
+              p.lead.mb-0 Unidades limitadas.
+              p.lead.mb-0 Reserve agora mesmo seus minions.
+        .reservas.col-lg-6.call-to-action-img name="reservas" id="reservas" 
+         = form_with(url: "/", method: "get") do
+          div style="margin-left:20%;"
+           div.form-group-row
+            = label_tag(:user, "Email:")
+            div.col-sm10
+              = email_field(:user, :address)
+           div.form-group-row
+            = label_tag(:jerry, "Jerry:")
+            div.col-sm10
+              = number_field(:jerry, :price, in: 0.0..10.0, step: 1.0)
+           div.form-group-row
+            = label_tag(:dave, "Dave:")
+            div.col-sm10
+              = number_field(:dave, :price, in: 0.0..10.0, step: 1.0)
+           div.form-group-row
+            = label_tag(:bob, "Bob:")
+            div.col-sm10
+              = number_field(:bob, :price, in: 0.0..10.0, step: 1.0)
+           div.form-group-row
+            = label_tag(:kevin, "Kevin:")
+            div.col-sm10
+              = number_field(:kevin, :price, in: 0.0..10.0, step: 1.0)
+           div.form-group-row
+            = label_tag(:phil, "Phil:")
+            div.col-sm10
+              = number_field(:phil, :price, in: 0.0..10.0, step: 1.0)
+          div.form-group-row
+            div.col-sm10
+              = submit_tag("Reserve")
+
+
+
+
+    /! Footer
+    footer.footer
+      .container
+        .row
+          .col-lg-6.h-100.text-center.text-lg-left.my-auto
+            p.text-muted.small.mb-4.mb-lg-0 &copy; 2019 - Minions Store - Todos os direitos reservados.
+
+
+
+

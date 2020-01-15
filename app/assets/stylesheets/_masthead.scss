@@ -1,0 +1,41 @@
+header.masthead {
+  position: relative;
+  background-color: #15649b;
+  background: linear-gradient(#8ccbfb, #15649b);
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  .background-img-div{
+    position: absolute;
+    background: url('intro.png') no-repeat center center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .overlay {
+    position: absolute;
+    background-color: #24292e;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    padding-top: 25rem;
+    padding-bottom: 9.5rem;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+
+
+
